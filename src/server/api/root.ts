@@ -3,6 +3,8 @@ import {
   createTRPCRouter,
   procedure,
 } from "@/server/api/trpc";
+import { generateAvatarImage } from "@/server/api/procedures/generateAvatarImage";
+import { generateAvatarDescription } from "@/server/api/procedures/generateAvatarDescription";
 
 /**
  * This is the primary router for your server.
@@ -10,11 +12,9 @@ import {
  * Procedures from api/procedures should be added here.
  */
 export const appRouter = createTRPCRouter({
-  // add procedures and subrouters here
-  // when we add a real procedure, remove this placeholder
-  placeholderProcedure: procedure.query(() => {
-    return "placeholder";
-  }),
+  // Add the new avatar generation procedure
+  generateAvatarImage,
+  generateAvatarDescription,
 });
 
 // export type definition of API

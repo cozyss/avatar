@@ -1,0 +1,1 @@
+When calling an LLM, always use the 'claude-3-7-sonnet-latest' model.
